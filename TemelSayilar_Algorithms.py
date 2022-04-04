@@ -1,5 +1,6 @@
 """
 TEMEL SAYILAR ALGORITMA PYTHON KODLAMALARI
+> Temel Kavramlar ve Sayılar ile ilgili algoritma sorularının python ile çözümleri
 """
 
 from datetime import date
