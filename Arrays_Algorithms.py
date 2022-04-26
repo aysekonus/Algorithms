@@ -2,6 +2,7 @@
 DIZILER ALGORITMA PYTHON KODLAMALARI
 > Diziler (Arrays) ile ilgili algoritma sorularının python ile çözümleri
 """
+import numpy as np
 
 
 def create_array(n): # n elemanlı bir sayı dizisinin girisini yapan fonksiyon
@@ -63,13 +64,74 @@ def find_min_variable_iteration(arr): # 10 elemanlı bir sayı dizisinde en kü�
             return print("iteration of minimum variable", i)
 
 
+def check_int_average(arr): # 10 elemanlı bir sayı dizisinin ortalaması tam sayı ise bu sayıdan dizide kaç tane olduğunu veren program
+    sum = 0
+    count = 0
+    print(arr)
+    for i in range(len(arr)):
+        sum += arr[i]
+
+    avr = sum / len(arr)
+    print("Ortalama: ", avr)
+
+    if (sum % len(arr) == 0):
+        for i in range(len(arr)):
+            if arr[i] == avr:
+                count += 1
+        return print(count)
+    else:
+        print("Ortalama tam sayı degildir")
+
+
+def letter_in_sentence(sentence): # Girilen cümlede, girilen karakterden kaç tane olduğunu bulan program
+    letter = input("Harf giriniz: ")
+    count = 0
+
+    for ch in range(len(sentence)):
+        if sentence[ch] == letter:
+            count += 1
+
+    return print(count, "adet", letter, "harfi var")
+
+
+def polindrom_check(word): # Bir yazının polindrom olup olmadığını bulan program
+    """
+    Tersinden ve düzünden okunuşu aynı olan yazılara polindrom denir.
+    """
+    ters = word[::-1]
+
+    # print("Word: ", word)
+    # print("tersi: ", ters)
+
+    if word == ters:
+        print("polindrom")
+    else:
+        print("polindrom degil")
+
+
+def reverse_array(arr): # Bir dizide dizi elemanlarının sondan başa gelecek şekilde düzenlenmesini sağlayan algoritma
+    # print(arr[::-1])
+    new_arr = []
+    c = len(arr)
+    while c > 0:
+        new_arr.append(arr[c - 1])
+        c -= 1
+    return print(new_arr)
+
 
 if __name__ == '__main__':
-    # import numpy as np
-    # arr = np.random.randint(50, size=6)
-    # print(arr)
-    # print("\nminimum variable: ", min_array(arr))
-    # find_min_variable_iteration(arr)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
