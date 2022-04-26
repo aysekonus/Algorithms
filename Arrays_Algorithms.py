@@ -120,6 +120,7 @@ def reverse_array(arr): # Bir dizide dizi elemanlarının sondan başa gelecek �
 
 
 if __name__ == '__main__':
+    # arr = ...
 
 
 
