@@ -40,4 +40,4 @@ if __name__ == '__main__':
     taylor_series_e(2, 4)
     consecutive_series(4)
     cos_series(2, 4)
-    fact_series(4)
+    fact_series(5)
